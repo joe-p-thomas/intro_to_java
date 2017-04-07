@@ -9,31 +9,35 @@ public class MergeSort {
 
     System.out.print("[2,3,4,1,5,7,6,9,8]: ");
     sorted = sort.mergeSort(new int[] {2,3,4,1,5,7,6,9,8});
+    System.out.print("[");
     for (int num : sorted) {
       System.out.print(Integer.toString(num) + " ");
     }
-    System.out.println("");
+    System.out.println("]");
 
     System.out.print("[]: ");
     sorted = sort.mergeSort(new int[0]);
+    System.out.print("[");
     for (int num : sorted) {
       System.out.print(Integer.toString(num) + " ");
     }
-    System.out.println("");
+    System.out.println("]");
 
     System.out.print("[2]: ");
     sorted = sort.mergeSort(new int[] {2});
+    System.out.print("[");
     for (int num : sorted) {
       System.out.print(Integer.toString(num) + " ");
     }
-    System.out.println("");
+    System.out.println("]");
 
-    System.out.print("[2,3,4,4,4,23,122,1]: ");
+    System.out.print("[2,3,4,4,4,23,-122,1]: ");
     sorted = sort.mergeSort(new int[] {2,3,4,4,4,23,-122,1});
+    System.out.print("[");
     for (int num : sorted) {
       System.out.print(Integer.toString(num) + " ");
     }
-    System.out.println("");
+    System.out.println("]");
   }
 
   public int[] mergeSort(int[] arr) {
