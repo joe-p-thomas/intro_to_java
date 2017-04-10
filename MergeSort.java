@@ -1,14 +1,12 @@
 // Merge Sort
 
-public class MergeSort {
+abstract class MergeSort {
 
   public static void main(String[] args) {
-    MergeSort sort = new MergeSort();
-
     int[] sorted;
 
     System.out.print("[2,3,4,1,5,7,6,9,8]: ");
-    sorted = sort.mergeSort(new int[] {2,3,4,1,5,7,6,9,8});
+    sorted = MergeSort.mergeSort(new int[] {2,3,4,1,5,7,6,9,8});
     System.out.print("[");
     for (int num : sorted) {
       System.out.print(Integer.toString(num) + " ");
@@ -16,7 +14,7 @@ public class MergeSort {
     System.out.println("]");
 
     System.out.print("[]: ");
-    sorted = sort.mergeSort(new int[0]);
+    sorted = MergeSort.mergeSort(new int[0]);
     System.out.print("[");
     for (int num : sorted) {
       System.out.print(Integer.toString(num) + " ");
@@ -24,7 +22,7 @@ public class MergeSort {
     System.out.println("]");
 
     System.out.print("[2]: ");
-    sorted = sort.mergeSort(new int[] {2});
+    sorted = MergeSort.mergeSort(new int[] {2});
     System.out.print("[");
     for (int num : sorted) {
       System.out.print(Integer.toString(num) + " ");
@@ -32,7 +30,7 @@ public class MergeSort {
     System.out.println("]");
 
     System.out.print("[2,3,4,4,4,23,-122,1]: ");
-    sorted = sort.mergeSort(new int[] {2,3,4,4,4,23,-122,1});
+    sorted = MergeSort.mergeSort(new int[] {2,3,4,4,4,23,-122,1});
     System.out.print("[");
     for (int num : sorted) {
       System.out.print(Integer.toString(num) + " ");
@@ -40,7 +38,7 @@ public class MergeSort {
     System.out.println("]");
   }
 
-  public int[] mergeSort(int[] arr) {
+  public static int[] mergeSort(int[] arr) {
     if (arr.length <= 1) {
       return arr;
     } else {
@@ -63,7 +61,7 @@ public class MergeSort {
     }
   }
 
-  public int[] mergeHelper(int[] arr1, int[] arr2) {
+  public static int[] mergeHelper(int[] arr1, int[] arr2) {
     int[] newArr = new int[arr1.length + arr2.length];
     int leftIdx, rightIdx, idx;
     leftIdx = rightIdx = idx = 0;
